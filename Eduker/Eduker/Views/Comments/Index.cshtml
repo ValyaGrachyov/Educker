@@ -1,0 +1,68 @@
+@model Eduker.ViewModels.InstructorsVm.InstructorsVm
+<!-- testimonial area start -->
+<section class="testimonial__area pt-80 pb-120 fix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="section__title-wrapper-2 mb-40 text-center">
+                    <span class="section__title-pre">Testimonials</span>
+                    <h3 class="section__title section__title-44">What our Customers Say.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="testimonial__slider">
+                    <div class="testimonial__active owl-carousel">
+                        @foreach (var c in Model.Comments)
+                        {
+                            <div class="testimonial__item transition-3 text-center white-bg">
+                                <div class="testimonial__avater">
+                                    <img src="@c.Course.ImgUrl" alt="">
+                                </div>
+                                <div class="testimonial__text">
+                                    <h4>@c.Title</h4>
+                                    <p>@c.Description</p>
+                                </div>
+                                <div class="testimonial__avater-info mb-5">
+                                    <h3>@c.Name</h3>
+                                    <span>@c.Course.Name</span>
+                                </div>
+                                <div class="testimonial__rating">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial area end -->

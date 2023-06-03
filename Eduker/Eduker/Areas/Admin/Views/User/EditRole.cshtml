@@ -1,0 +1,46 @@
+﻿@using Eduker.Areas.Admin.ViewModels.UserVm;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model EditUserRoleVm
+@{
+    Layout = "_AdminLayout";
+}
+
+<div id="right-panel" class="right-panel">
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-inner" style="background-color: #0a58ca">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left" style="background-color: #0a58ca">
+                        <div class="page-title">
+                            <h1 style="color: #eaebf0">Roles</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+    <form method="post">
+        <div>
+            <p>RoleName</p>
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">
+            Commit
+        </button>
+    </form>
+    </div>
+    </div>
+
+<div id="right-panel" class="right-panel">
+    <div class="content">
+        <a asp-area="Admin" asp-controller="User" asp-action="Index">
+            <button type="submit" class="btn btn-link btn-sm">
+                Back
+            </button>
+        </a>
+    </div>
+</div>

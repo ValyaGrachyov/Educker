@@ -1,0 +1,434 @@
+@model Eduker.ViewModels.About.AboutVm;
+<!-- offcanvas area start -->
+<div class="offcanvas__area">
+    <div class="modal fade" id="offcanvasmodal" tabindex="-1" aria-labelledby="offcanvasmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo logo">
+                                <a href="/">
+                                    <img src="/img/logo/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button class="offcanvas__close-btn" data-bs-toggle="modal" data-bs-target="#offcanvasmodal">
+                                    <i class="fal fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mobile-menu fix"></div>
+                        <div class="offcanvas__text d-none d-lg-block">
+                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you a complete account of the system and expound the actual teachings of the great explore</p>
+                        </div>
+                        <div class="offcanvas__map d-none d-lg-block mb-15">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29176.030811137334!2d90.3883827!3d23.924917699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1605272373598!5m2!1sen!2sbd"></iframe>
+                        </div>
+                        @*<div class="offcanvas__contact mt-30 mb-20">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="https://www.google.com/maps/place/Dhaka/23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">12/A, Mirnada City Tower, NYC</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:support@gmail.com">088889797697</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+012-345-6789">support@mail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas__social">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- offcanvas area end -->
+<div class="body-overlay"></div>
+<!-- offcanvas area end -->
+
+<main>
+
+<!-- breadcrumb area start -->
+<section class="breadcrumb__area include-bg pt-150 pb-150 breadcrumb__overlay" data-background="https://www.carneysandoe.com/assets/education-icons-futuristic.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="breadcrumb__content text-center p-relative z-index-1">
+                    <h3 class="breadcrumb__title">About</h3>
+                    <div class="breadcrumb__list">
+                        <span>
+                            <a asp-controller="Home" asp-action="Index">Home</a>
+                        </span>
+                        <span class="dvdr">
+                            <i class="fa-regular fa-angle-right"></i>
+                        </span>
+                        <span>About</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb area end -->
+
+<!-- about area start -->
+<section class="about__area pt-120 pb-120 p-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-7 col-xl-7 col-lg-7">
+                <div class="about__thumb-wrapper d-sm-flex mr-20 p-relative">
+                    <div class="about__shape">
+                        <img class="about__shape-1 d-none d-sm-block" src="/img/about/about-shape-1.png" alt="">
+                        <img class="about__shape-2 d-none d-sm-block" src="/img/about/about-shape-2.png" alt="">
+                        <img class="about__shape-3" src="/img/about/about-shape-3.png" alt="">
+                    </div>
+                    <div class="about__thumb-left mr-10">
+                        <div class="about__thumb-1 mb-10">
+                            <img width="241" height="280" src="https://i.pinimg.com/564x/53/14/da/5314da8e39e1fb0b6baf40b2a8f7e2b8.jpg" alt="">
+                        </div>
+                        <div class="about__thumb-1 mb-10 text-end">
+                            <img width="171" height="150" src="https://i.pinimg.com/564x/93/96/43/939643f2013cbf8288502a6235946800.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="about__thumb-2 mb-10">
+                        <img width="401" height="570" src="https://i.pinimg.com/564x/45/a5/e4/45a5e4390941ece97bb81eb5b6cb1952.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-5 col-xl-5 col-lg-5">
+                <div class="about__content pl-70 pr-25">
+                    <div class="section__title-wrapper mb-15">
+                        <span class="section__title-pre">About Educal</span>
+                        <h2 class="section__title">Degrees in Various academic Didciplines</h2>
+                    </div>
+                    <p>Not only can university offer an environment rich in our social an cultural experiences.</p>
+
+                    <div class="about__list mb-40">
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Access to all our courses</li>
+                            <li><i class="fa-solid fa-check"></i> Learn the latest skills</li>
+                            <li><i class="fa-solid fa-check"></i> Upskill your organization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about area end -->
+
+<!-- course area start -->
+<section class="course__area pt-115 pb-90 grey-bg-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="section__title-wrapper text-center mb-60">
+                    <span class="section__title-pre">Top Courses</span>
+                    <h2 class="section__title section__title-44">Our Featured Courses</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing aelit, sed do eiusmod</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @{
+                var course = Model.Courses;
+                for (int i = 0; i < 6; i++)
+                {
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="course__item-2 transition-3 white-bg mb-30 fix">
+                            <div class="course__thumb-2 w-img fix">
+                                <a asp-controller="Course" asp-action="Index" asp-route-id="@course[i].Id">
+                                    <img src="@course[i].ImgUrl" alt="">
+                                </a>
+                            </div>
+                            <div class="course__content-2">
+                                <div class="course__top-2 d-flex align-items-center justify-content-between">
+                                    <div class="course__tag-2">
+                                        <a href="#">Category</a>
+                                    </div>
+                                    <div class="course__price-2">
+                                        <span>$@course[i].Price</span>
+                                    </div>
+                                </div>
+                                <h3 class="course__title-2">
+                                    <a asp-controller="Course" asp-action="Index" asp-route-id="@course[i].Id">@course[i].Name.</a>
+                                </h3>
+                                <div class="course__bottom-2 d-flex align-items-center justify-content-between">
+                                    <div class="course__action">
+                                        <ul>
+                                            <li>
+                                                <div class="course__action-item d-flex align-items-center">
+                                                    <div class="course__action-icon mr-5">
+                                                        <span>
+                                                            <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.00004 5.5833C6.28592 5.5833 7.32833 4.5573 7.32833 3.29165C7.32833 2.02601 6.28592 1 5.00004 1C3.71416 1 2.67175 2.02601 2.67175 3.29165C2.67175 4.5573 3.71416 5.5833 5.00004 5.5833Z" stroke="#5F6160" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M9 11.0001C9 9.22632 7.20722 7.79175 5 7.79175C2.79278 7.79175 1 9.22632 1 11.0001" stroke="#5F6160" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="course__action-content">
+                                                        <span>@course[i].Subscribers k</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="course__action-item d-flex align-items-center">
+                                                    <div class="course__action-icon mr-5">
+                                                        <span>
+                                                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9.01232 5.95416C9.01232 7.06709 8.11298 7.96642 7.00006 7.96642C5.88713 7.96642 4.98779 7.06709 4.98779 5.95416C4.98779 4.84123 5.88713 3.94189 7.00006 3.94189C8.11298 3.94189 9.01232 4.84123 9.01232 5.95416Z" stroke="#5F6160" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M7 10.6026C8.98416 10.6026 10.8334 9.43342 12.1206 7.40991C12.6265 6.61737 12.6265 5.28523 12.1206 4.49269C10.8334 2.46919 8.98416 1.30005 7 1.30005C5.01584 1.30005 3.16658 2.46919 1.87941 4.49269C1.37353 5.28523 1.37353 6.61737 1.87941 7.40991C3.16658 9.43342 5.01584 10.6026 7 10.6026Z" stroke="#5F6160" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="course__action-content">
+                                                        <span>@course[i].Views k</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="course__action-item d-flex align-items-center">
+                                                    <div class="course__action-icon mr-5">
+                                                        <span>
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M6.86447 1.72209L7.74447 3.49644C7.86447 3.74343 8.18447 3.98035 8.45447 4.02572L10.0495 4.29288C11.0695 4.46426 11.3095 5.2103 10.5745 5.94625L9.33447 7.19636C9.12447 7.40807 9.00947 7.81637 9.07447 8.10873L9.42947 9.65625C9.70947 10.8812 9.06447 11.355 7.98947 10.7148L6.49447 9.82259C6.22447 9.66129 5.77947 9.66129 5.50447 9.82259L4.00947 10.7148C2.93947 11.355 2.28947 10.8761 2.56947 9.65625L2.92447 8.10873C2.98947 7.81637 2.87447 7.40807 2.66447 7.19636L1.42447 5.94625C0.694466 5.2103 0.929466 4.46426 1.94947 4.29288L3.54447 4.02572C3.80947 3.98035 4.12947 3.74343 4.24947 3.49644L5.12947 1.72209C5.60947 0.759304 6.38947 0.759304 6.86447 1.72209Z" stroke="#5F6160" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="course__action-content">
+                                                        <span>@course[i].Rating</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="course__tutor-2">
+                                        <a href="#">
+                                            <img src="@course[i].MainInstructor.ImgUrl" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+<!-- course area end -->
+
+<!-- team area start -->
+<section class="team__area pt-115">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="section__title-wrapper-2 mb-40">
+                    <span class="section__title-pre-2">Top Instructors</span>
+                    <h3 class="section__title-2">Become A Instruction Instructor.</h3>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="team__wrapper mb-45 pl-70">
+                    <p>Placerat veritatis ullamco rutrum quia illo, aenean eaque necessitatibus aptent vehicula porta? Sollicitudin id, laboris commodi! </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @{
+                var instructors = Model.Instructors;
+                for (int i = 0; i < 4; i++)
+                {
+                    <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
+                        <div class="team__item text-center mb-40">
+                            <div class="team__thumb">
+                                <img src="@instructors[i].ImgUrl" width="259" height="370" alt="">
+                            </div>
+                            <div class="team__content">
+                                <h3 class="team__title">
+                                    <a asp-controller="CurrentInstructor" asp-route-id="@instructors[i].Id">@instructors[i].Name @instructors[i].Surname</a>
+                                </h3>
+                                <span class="team__designation">@instructors[i].Specialization</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+<!-- team area end -->
+
+<!-- testimonial area start -->
+<section class="testimonial__area pt-120 pb-120 fix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="section__title-wrapper-2 mb-40 text-center">
+                    <span class="section__title-pre">Testimonials</span>
+                    <h3 class="section__title section__title-44">What our Customers Say.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="testimonial__slider">
+                    <div class="testimonial__active owl-carousel">
+                        @foreach (var c in Model.Comments)
+                        {
+                            <div class="testimonial__item transition-3 text-center white-bg">
+                                <div class="testimonial__avater">
+                                    <img src="@c.Course.ImgUrl" alt="">
+                                </div>
+                                <div class="testimonial__text">
+                                    <h4>@c.Title</h4>
+                                    <p>@c.Description</p>
+                                </div>
+                                <div class="testimonial__avater-info mb-5">
+                                    <h3>@c.Name</h3>
+                                    <span>@c.Course.Name</span>
+                                </div>
+                                <div class="testimonial__rating">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-star"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial area end -->
+
+<!-- brand area start -->
+@* TODO Хз что тут, но оно в самом низу) *@
+@* <section class="brand__area pb-70"> *@
+@*     <div class="container"> *@
+@*         <div class="row"> *@
+@*             <div class="col-xxl-4 col-xl-4 col-lg-4"> *@
+@*                 <div class="brand__wrapper"> *@
+@*                     <div class="section__title-wrapper-2"> *@
+@*                         <span class="section__title-pre">Testimonials</span> *@
+@*                         <h3 class="section__title section__title-30">Who will you learn with?</h3> *@
+@*                     </div> *@
+@*                     <p>You can list your partners or instructors's brands here to show off your site's reputation</p> *@
+@*                     <div class="brand__btn"> *@
+@*                         <a asp-controller="About" asp-action="Index" class="tp-btn-5 tp-btn-6">View all partners</a> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*             <div class="col-xxl-8 col-xl-8 col-lg-8"> *@
+@*                 <div class="brand__item-wrapper pl-100"> *@
+@*                     <div class="row align-items-center"> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-1.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-2.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-3.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-4.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-5.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-6.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6"> *@
+@*                             <div class="brand__item text-center m-img mb-40"> *@
+@*                                 <img src="/img/brand/brand-7.png" alt=""> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+@* </section> *@
+<!-- brand area end -->
+</main>

@@ -1,0 +1,98 @@
+﻿@using Eduker.Areas.Admin.ViewModels.RolesVm;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<RoleVm>
+@{
+    Layout = "_AdminLayout";
+}
+
+<div id="right-panel" class="right-panel">
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-inner" style="background-color: #0a58ca">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left" style="background-color: #0a58ca">
+                        <div class="page-title">
+                            <h1 style="color: #eaebf0">Roles</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="width: 600px">
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                @{
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.Name</td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Roles" asp-action="Edit" asp-route-id="@x.Id">
+                                    <button type="button" class="btn btn-outline-primary">
+                                        Edit
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Roles" asp-action="Delete" asp-route-id="@x.Id">
+                                    <button type="button" class="btn btn-outline-danger">
+                                        Delete
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="right-panel" class="right-panel">
+    <div class="breadcrumbs" style="margin-top: 100px">
+        <div class="breadcrumbs-inner" style="background-color: #0a58ca">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left" style="background-color: #0a58ca">
+                        <div class="page-title">
+                            <h1 style="color: #eaebf0">Add Role</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <form method="post">
+                <div>
+                    <p>Role name</p>
+                    @Html.Editor("name")
+                    @Html.ValidationMessageFor(model => model.First().Name)
+                </div>
+                <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">
+                    Create role
+                </button>
+            </form>
+    </div>
+</div>
+
+<div id="right-panel" class="right-panel">
+    <div class="content">
+        <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+            <button type="submit" class="btn btn-link btn-sm" style>
+                Back
+            </button>
+        </a>
+    </div>
+</div>

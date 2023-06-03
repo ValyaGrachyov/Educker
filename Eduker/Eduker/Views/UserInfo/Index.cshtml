@@ -1,0 +1,271 @@
+﻿@using Eduker.ViewModels.UserInfoVm;
+@model UserInfoVm
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eduker – Online Course & Education HTML5 Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/meanmenu.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl-carousel.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="/css/spacing.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main>
+
+        <!-- breadcrumb area start -->
+        <section class="breadcrumb__area include-bg pt-150 pb-150 breadcrumb__overlay" data-background="https://www.meme-arsenal.com/memes/196dda8309e45b28ed93898d64c92d55.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="breadcrumb__content text-center p-relative z-index-1">
+                            <h3 class="breadcrumb__title">My Profile</h3>
+                            <div class="breadcrumb__list">
+                                <span><a href="index.html">Home</a></span>
+                                <span class="dvdr"><i class="fa-regular fa-angle-right"></i></span>
+                                <span>My Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb area end -->
+        <!-- profile area start -->
+        <section class="profile__area pt-120 pb-50 grey-bg-2">
+            <div class="container">
+                <div class="profile__basic-inner pb-20 white-bg">
+                    <div class="row align-items-center">
+                        <div class="col-xxl-6 col-md-6">
+                            <div class="profile__basic d-md-flex align-items-center">
+                                @* Тут нужно будет прикрутить логику для фоточек юзера, но сейчас влом этим заниматься
+                                @* <div class="profile__basic-thumb mr-30"> *@
+                                @*     <img src="/img/profile/profile-img.jpg" alt=""> *@
+                                @* </div> *@
+                                <div class="profile__basic-content">
+                                    <h3 class="profile__basic-title">
+                                        Welcome Back <span>@Model.UserName</span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        @* <div class="col-xxl-6 col-md-6">
+                        <div class="profile__basic-cart d-flex align-items-center justify-content-md-end">
+                        <div class="cart-info mr-10">
+                        <a href="cart.html">View cart</a>
+                        </div>
+                        <div class="cart-item">
+                        <a href="cart.html">
+                        <i class="fa-regular fa-basket-shopping"></i>
+                        <span class="cart-quantity">2</span>
+                        </a>
+                        </div>
+                        </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- profile area end -->
+        <!-- profile menu area start -->
+        <section class="profile__menu pb-70 grey-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-4 col-md-4">
+                        <div class="profile__menu-left white-bg mb-50">
+                            <h3 class="profile__menu-title"><i class="fa-regular fa-square-list"></i> Your Menu</h3>
+                            <div class="profile__menu-tab">
+                                <div class="nav nav-tabs flex-column justify-content-start text-start" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="true"> <i class="fa-regular fa-user"></i> My Account</button>
+                                    <button class="nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false"><i class="fa-regular fa-file-lines"></i>Orders</button>
+                                    <button class="nav-link" id="nav-password-tab" data-bs-toggle="tab" data-bs-target="#nav-password" type="button" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa-regular fa-lock"></i>Change Password</button>
+                                    <a asp-action="Logout" ><button class="nav-link"><i class="fa-regular fa-arrow-right-from-bracket"></i> Logout</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-8 col-md-8">
+                        <div class="profile__menu-right">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab">
+                                    <div class="profile__info">
+
+                                        <div class="profile__info-top d-flex justify-content-between align-items-center">
+                                            <h3 class="profile__info-title">Profile Information</h3>
+                                            <button class="profile__info-btn" type="button" data-bs-toggle="modal" data-bs-target="#profile_edit_modal"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</button>
+                                        </div>
+
+                                        <div class="profile__info-wrapper white-bg">
+                                            <div class="profile__info-item">
+                                                <p>Name</p>
+                                                <h4>@Model.RealName</h4>
+                                                @Html.ValidationMessage("realName","Should be fill", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="profile__info-item">
+                                                <p>Email</p>
+                                                <h4>@Model.Email</h4>
+                                                @Html.ValidationMessage("email","Should be fill", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="profile__info-item">
+                                                <p>Phone</p>
+                                                <h4>@Model.Phone</h4>
+                                                @Html.ValidationMessage("phone","Should be fill", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="profile__info-item">
+                                                <p>Address</p>
+                                                <h4>@Model.Address</h4>
+                                                @Html.ValidationMessage("address","Should be fill", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
+                                    <div class="order__info">
+                                        <div class="order__info-top d-flex justify-content-between align-items-center">
+                                            <h3 class="order__info-title">My Orders</h3>
+                                            <button type="button" class="order__info-btn"><i class="fa-regular fa-trash-can"></i> Clear</button>
+                                        </div>
+
+                                        <div class="order__list white-bg table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Order ID</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="order__id">#3520</td>
+                                                        <td><a href="course-details.html" class="order__title">University seminar series global.</a></td>
+                                                        <td>$144.00</td>
+                                                        <td><a href="course-details.html" class="order__view-btn">View</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="order__id">#2441</td>
+                                                        <td><a href="course-details.html" class="order__title">Web coding and apache basics</a></td>
+                                                        <td>$59.54</td>
+                                                        <td><a href="course-details.html" class="order__view-btn">View</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="order__id">#2357</td>
+                                                        <td><a href="course-details.html" class="order__title">Economics historical development</a></td>
+                                                        <td>$89.90</td>
+                                                        <td><a href="course-details.html" class="order__view-btn">View</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+                                    <div class="password__change">
+                                        <div class="password__change-top">
+                                            <h3 class="password__change-title">Change Password</h3>
+                                        </div>
+                                        <div class="password__form white-bg">
+                                            <form method="post" asp-action="EditPassword" asp-route-id="@Model.IdentityId">
+                                                <div class="password__input">
+                                                    <p>Old Password</p>
+                                                    @Html.Editor("oldpassword")
+                                                </div>
+                                                <div class="password__input">
+                                                    <p>New Password</p>
+                                                    @Html.Editor("newpassword")
+                                                </div>
+                                                <div class="password__input">
+                                                    <p>Confirm Password</p>
+                                                    @Html.Editor("confirmpassword")
+                                                </div>
+                                                <div class="password__input">
+                                                        <button type="submit" class="tp-btn">Update password</button>                                                   
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- profile menu area end -->
+
+        <div class="profile__edit-modal">
+            <!-- Modal -->
+            <div class="modal fade" id="profile_edit_modal" tabindex="-1" aria-labelledby="profile_edit_modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="profile__edit-wrapper">
+                            <form method="post" asp-route-id="@Model.Id">
+                                <div class="profile__edit-input">
+                                    <p>Name</p>
+                                    @Html.EditorFor(model => model.RealName)
+                                    @Html.ValidationMessage("realname")
+                                </div>
+                                <div class="profile__edit-input">
+                                    <p>Email</p>
+                                    @Html.EditorFor(model => model.Email)
+                                    @Html.ValidationMessage("email")
+                                </div>
+                                <div class="profile__edit-input">
+                                    <p>Phone</p>
+                                    @Html.EditorFor(model => model.Phone)
+                                    @Html.ValidationMessage("phone")
+                                </div>
+                                <div class="profile__edit-input">
+                                    <p>Address</p>
+                                    @Html.EditorFor(model => model.Address)
+                                    @Html.ValidationMessage("address")
+                                </div>
+                                <div class="profile__edit-input">
+                                    <button type="submit" class="tp-btn w-100">Update</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- JS here -->
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/waypoints.js"></script>
+    <script src="/js/bootstrap-bundle.js"></script>
+    <script src="/js/meanmenu.js"></script>
+    <script src="/js/swiper-bundle.js"></script>
+    <script src="/js/owl-carousel.js"></script>
+    <script src="/js/magnific-popup.js"></script>
+    <script src="/js/parallax.js"></script>
+    <script src="/js/backtotop.js"></script>
+    <script src="/js/nice-select.js"></script>
+    <script src="/js/counterup.js"></script>
+    <script src="/js/wow.js"></script>
+    <script src="/js/isotope-pkgd.js"></script>
+    <script src="/js/imagesloaded-pkgd.js"></script>
+    <script src="/js/ajax-form.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

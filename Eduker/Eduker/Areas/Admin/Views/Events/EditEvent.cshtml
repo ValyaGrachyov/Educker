@@ -1,0 +1,80 @@
+﻿@using Eduker.Areas.Admin.ViewModels.EventsVM;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model EditEventsVM
+@{
+    Layout = "_AdminLayout";
+}
+
+<div id="right-panel" class="right-panel">
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-inner" style="background-color: #0a58ca">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left" style="background-color: #0a58ca">
+                        <div class="page-title">
+                            <h1 style="color: #eaebf0">Roles</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+    <form method="post">
+    <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Name</p>
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">Description</p>
+        @Html.EditorFor(model => model.Description)
+    </div>
+
+   <div style="margin-top: 30px">
+                   <p style="margin-bottom: 0;">Educator name</p>
+        @Html.EditorFor(model => model.EducatorName)
+    </div>
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">Start time</p>
+        @Html.Editor("TimeStart", "{0:dd.MM.yyyy}")
+    </div>
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">End time</p>
+        @Html.Editor("TimeEnd", "{0:dd.MM.yyyy}")
+    </div>
+
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">Address</p>
+        @Html.EditorFor(model => model.Address)
+    </div>
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">Language</p>
+        @Html.EditorFor(model => model.Language)
+    </div>
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">Price</p>
+        @Html.EditorFor(model => model.Price)
+    </div>
+    <div style="margin-top: 30px">
+                    <p style="margin-bottom: 0;">Image path</p>
+        @Html.EditorFor(model => model.ImgPath)
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">
+        Commit
+    </button>
+   </form>
+    </div>
+    </div>
+
+<div id="right-panel" class="right-panel">
+    <div class="content">
+        <a asp-area="Admin" asp-controller="Events" asp-action="Index">
+            <button type="submit" class="btn btn-link btn-sm">
+                Back
+            </button>
+        </a>
+    </div>
+</div>

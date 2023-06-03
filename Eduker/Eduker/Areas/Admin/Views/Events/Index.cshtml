@@ -1,0 +1,136 @@
+﻿@using Eduker.Areas.Admin.ViewModels.EventsVM;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<EventsVM>
+@{
+    Layout = "_AdminLayout";
+}
+
+<div id="right-panel" class="right-panel">
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-inner" style="background-color: #0a58ca">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left" style="background-color: #0a58ca">
+                        <div class="page-title">
+                            <h1 style="color: #eaebf0">Events</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="width: 600px">
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                @{
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.Name</td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Events" asp-action="EditEvent" asp-route-id="@x.Id">
+                                    <button type="button" class="btn btn-outline-primary">
+                                        Edit
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Events" asp-action="Delete" asp-route-id="@x.Id">
+                                    <button type="button" class="btn btn-outline-danger">
+                                        Delete
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="right-panel" class="right-panel">
+    <div class="breadcrumbs" style="margin-top: 100px">
+        <div class="breadcrumbs-inner" style="background-color: #0a58ca">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    <div class="page-header float-left" style="background-color: #0a58ca">
+                        <div class="page-title">
+                            <h1 style="color: #eaebf0">Add Role</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <form method="post">
+            <div>
+                <p style="margin-bottom: 0;">Event name</p>
+                @Html.Editor("Name")
+            </div>
+
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Description</p>
+                @Html.Editor("Description")
+            </div>
+
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Start time</p>
+                @Html.Editor("TimeStart", "{0:dd.MM.yyyy}")
+            </div>
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">End time</p>
+                @Html.Editor("TimeEnd", "{0:dd.MM.yyyy}")
+            </div>
+
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Educator name</p>
+                @Html.Editor("EducatorName")
+            </div>
+
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Adress</p>
+                @Html.Editor("Address")
+            </div>
+
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Language</p>
+                @Html.Editor("Language")
+            </div>
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Price</p>
+                @Html.Editor("Price")
+            </div>
+            <div style="margin-top: 30px">
+                <p style="margin-bottom: 0;">Image path</p>
+                @Html.Editor("ImgPath")
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">
+                Create Event
+            </button>
+        </form>
+        <br/>
+    </div>
+</div>
+
+<div id="right-panel" class="right-panel">
+    <div class="content">
+        <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+            <button type="submit" class="btn btn-link btn-sm" style>
+                Back
+            </button>
+        </a>
+    </div>
+</div>

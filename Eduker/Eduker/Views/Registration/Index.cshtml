@@ -1,0 +1,233 @@
+﻿@using Eduker.ViewModels.RegistrationVm;
+@using Microsoft.IdentityModel.Protocols
+@model RegistrationVm
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eduker – Online Course & Education HTML5 Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/meanmenu.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl-carousel.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.css">
+    <link rel="stylesheet" href="/css/backtotop.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="/css/spacing.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- offcanvas area start -->
+<div class="offcanvas__area">
+    <div class="modal fade" id="offcanvasmodal" tabindex="-1" aria-labelledby="offcanvasmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo logo">
+                                <a href="/">
+                                    <img src="/img/logo/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button class="offcanvas__close-btn" data-bs-toggle="modal" data-bs-target="#offcanvasmodal">
+                                    <i class="fal fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mobile-menu fix"></div>
+                        <div class="offcanvas__text d-none d-lg-block">
+                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you a complete account of the system and expound the actual teachings of the great explore</p>
+                        </div>
+                        <div class="offcanvas__map d-none d-lg-block mb-15">
+                            <iframe src=""></iframe>
+                        </div>
+                        @*<div class="offcanvas__contact mt-30 mb-20">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank"> Dvoyka KFU</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:support@gmail.com">088889797697</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+012-345-6789">support@mail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>*@
+                        @*<div class="offcanvas__social">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- offcanvas area end -->
+<div class="body-overlay"></div>
+<!-- offcanvas area end -->
+
+<main>
+
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb__area include-bg pt-150 pb-150 breadcrumb__overlay" data-background="https://wordsporn.com/wp-content/uploads/2018/06/20-Who-Are-You-Memes-That%E2%80%99ll-Save-You-From-Embarrassment.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="breadcrumb__content text-center p-relative z-index-1">
+                        <h3 class="breadcrumb__title">Register</h3>
+                        <div class="breadcrumb__list">
+                            <span>
+                                <a href="/">Home</a>
+                            </span>
+                            <span class="dvdr">
+                                <i class="fa-regular fa-angle-right"></i>
+                            </span>
+                            <span>Register</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+    <!-- sign up area start -->
+    <section class="signup__area p-relative z-index-1 pt-100 pb-145">
+        <div class="sign__shape">
+            <img class="man-1" src="/img/icon/sign/man-3.png" alt="">
+            <img class="man-2 man-22" src="/img/icon/sign/man-2.png" alt="">
+            <img class="circle" src="/img/icon/sign/circle.png" alt="">
+            <img class="zigzag" src="/img/icon/sign/zigzag.png" alt="">
+            <img class="dot" src="/img/icon/sign/dot.png" alt="">
+            <img class="bg" src="/img/icon/sign/sign-up.png" alt="">
+            <img class="flower" src="/img/icon/sign/flower.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
+                    <div class="section__title-wrapper text-center mb-55">
+                        <h2 class="section__title">Create a free <br> Account</h2>
+                        <p>I'm a subhead that goes with a story.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                    <div class="sign__wrapper white-bg">
+                        <div class="sign__header mb-35">
+                            <div class="sign__in text-center">
+                                <a href="https://accounts.google.com/o/oauth2/auth?client_id=788820179404-jpaviguchcg2ifi4l5o6i3beqhc4as7r.apps.googleusercontent.com&response_type=code&redirect_uri=https://localhost:44395/registration/signin-google&scope=https://www.googleapis.com/auth/userinfo.email" class="sign__social g-plus text-start mb-15"><i class="fab fa-google-plus-g"></i>Sign Up with Google</a>
+                                <p> <span>........</span> Or, <a asp-controller="Registration" asp-action="Index">sign up</a> with your email<span> ........</span> </p>
+                            </div>
+                        </div>
+                        <div class="sign__form">
+                            <form method="post">
+                                <div class="sign__input-wrapper mb-25">
+                                    <h5>Full Name</h5>
+                                    <div class="sign__input">
+                                        <input type="text" name="name" placeholder="Full name">
+                                        @Html.ValidationMessageFor(model => model.Name)
+                                        <i class="fal fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="sign__input-wrapper mb-25">
+                                    <h5>Work email</h5>
+                                    <div class="sign__input">
+                                        <input type="text" name="email" placeholder="e-mail address">
+                                        @Html.ValidationMessageFor(model => model.Email)
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="sign__input-wrapper mb-25">
+                                    <h5>Password</h5>
+                                    <div class="sign__input">
+                                        <input type="password" name="password" placeholder="Password">
+                                        @Html.ValidationMessageFor(model => model.Password)
+                                        <i class="fal fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="sign__input-wrapper mb-10">
+                                    <h5>Re-Password</h5>
+                                    <div class="sign__input">
+                                        <input type="password" name="confirmpassword" placeholder="Re-Password">
+                                        @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                                        <i class="fal fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="sign__action d-flex justify-content-between mb-30">
+                                    <div class="sign__agree d-flex align-items-center">
+                                        <input class="m-check-input" type="checkbox" id="m-agree">
+                                        <label class="m-check-label" for="m-agree">
+                                            I agree to the <a href="#">Terms & Conditions</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="tp-btn w-100"> <span></span> Sign Up</button>
+                                <div class="sign__new text-center mt-20">
+                                    <p>Already in Markit ? <a  asp-controller="Login" asp-action="Index"> Sign In</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sign up area end -->
+
+
+</main>
+
+<!-- JS here -->
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/waypoints.js"></script>
+<script src="/js/bootstrap-bundle.js"></script>
+<script src="/js/meanmenu.js"></script>
+<script src="/js/swiper-bundle.js"></script>
+<script src="/js/owl-carousel.js"></script>
+<script src="/js/magnific-popup.js"></script>
+<script src="/js/parallax.js"></script>
+<script src="/js/backtotop.js"></script>
+<script src="/js/nice-select.js"></script>
+<script src="/js/counterup.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/isotope-pkgd.js"></script>
+<script src="/js/imagesloaded-pkgd.js"></script>
+<script src="/js/ajax-form.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
